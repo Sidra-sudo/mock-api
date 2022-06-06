@@ -1,0 +1,10 @@
+{
+    "user" : [
+        {
+            "bio": "Automation Engineer1",
+            "email": "devqa123@gmail.com",
+            "image": "Automation Engineer1",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRldnFhMTIzQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZGV2cWEiLCJpYXQiOjE2NTQ1MTI2MTgsImV4cCI6MTY1OTY5NjYxOH0.7xM7YbfHakcpR5Is-9BYpL_6eBlHejddRMgnsFrbqSM",
+            "username": "devqa"}
+        ]
+}

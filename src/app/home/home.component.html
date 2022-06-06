@@ -42,7 +42,7 @@
         <div class="sidebar">
           <p>Popular Tags</p>
 
-          <div class="tag-list">
+          <div class="tag-list" test-data="tags list">
             <a *ngFor="let tag of tags"
                (click)="setListTo('all', {tag: tag})"
                class="tag-default tag-pill">
