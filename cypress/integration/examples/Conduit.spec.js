@@ -2,7 +2,8 @@
 
 describe('Login user',() => {
 
-    it('Should Verify that user is able to login',() => { 
+    it('Should Verify that user is able to login',() => {
+
 
         cy.visit('http://localhost:4200/login')
         cy.get('[placeholder="Email"]').type('devqa123@gmail.com')
@@ -14,7 +15,7 @@ describe('Login user',() => {
     })
 })
 
-describe('Creating new article',() => {
+describe('Check Popular Tags, New Articles, View Articles list from global feed & Profile and update profile from settings',() => {
     it('Should verify correct request and response while creating new article', () => {
 
         cy.intercept('POST', '**/articles').as('postArticles')
@@ -26,7 +27,16 @@ describe('Creating new article',() => {
         cy.get('[formcontrolname="body"]').type('#cypress')
         cy.contains('Publish Article').click()
         })
-})
+
+    it('Should verify user is able to view all articles in My Post', () => {
+        cy.intercept('GET', 'https://api.realworld.io/api/articles?author=qa-automation&limit=10&offset=0', { fixture: "MyPost.json" }).as('mypost')
+        cy.get('a[ng-reflect-router-link="/profile,devqa"]').click
+        // cy.wait(5000)
+        cy.get('a[href*="devqa"]').click()
+        cy.get('[test-data=profile-posts]').should('be.visible').click()
+    
+    })
+
     it('Should display Tags list in Popular Tags',() => {
         cy.intercept('GET', '**/tags*', { fixture: "tags.json" }).as('gettags')
 
@@ -59,23 +69,21 @@ describe('Creating new article',() => {
             expect(listofbuttons[3]).to.contain('1036')
         })
     })
-
-})
-
+    })
     it('Should verify user is able to update profile from settings', () => {
         cy.visit('http://localhost:4200/login')
         cy.get('[placeholder="Email"]').type('devqa123@gmail.com')
         cy.get('[placeholder="Password"]').type('123456')
         cy.get('form').submit()
-        cy.intercept('GET', '**/profiles/*', { fixture: "user.json" }).as('updateprofile')
+        cy.intercept('PUT', 'https://api.realworld.io/api/user', { fixture: "user.json" }).as('setting')
 
-        cy.contains('Settings').click()
-    // cy.get('[formcontrolname="image"]').clear().type('Sidra')
-        cy.get('[formcontrolname="bio"]').clear().type('Automation Engineer')
+        cy.get('[test-data="Settings"]').should('be.visible').click()
+        cy.get('[formcontrolname="bio"]').clear()
         cy.contains('Update Settings').click()
-        cy.wait('@updateprofile').then((profile) => {
+        cy.wait('@setting').then((profile) => {
         cy.log(profile.response)
         expect(profile.response.statusCode).to.equal(200)
     })
+})
 
 })

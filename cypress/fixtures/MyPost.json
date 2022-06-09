@@ -1,0 +1,90 @@
+{
+    "articles": [
+        {
+            "slug": "postman-52914",
+            "title": "postman",
+            "description": "new",
+            "body": "article",
+            "tagList": [],
+            "createdAt": "2022-06-08T08:37:25.794Z",
+            "updatedAt": "2022-06-08T08:37:25.794Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "qa-automation",
+                "bio": "Automation Engineer",
+                "image": "Automation Engineer",
+                "following": false
+            }
+        },
+        {
+            "slug": "post-52914",
+            "title": "post",
+            "description": "new",
+            "body": "article",
+            "tagList": [],
+            "createdAt": "2022-06-08T08:36:24.730Z",
+            "updatedAt": "2022-06-08T08:36:24.730Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "qa-automation",
+                "bio": "Automation Engineer",
+                "image": "Automation Engineer",
+                "following": false
+            }
+        },
+        {
+            "slug": "Article-from-cypress-52914",
+            "title": "Article from cypress",
+            "description": "Automatically created this artcle",
+            "body": "Test Article ro delete automatically#cypress",
+            "tagList": [],
+            "createdAt": "2022-06-06T13:53:12.049Z",
+            "updatedAt": "2022-06-06T13:53:12.049Z",
+            "favorited": true,
+            "favoritesCount": 1,
+            "author": {
+                "username": "qa-automation",
+                "bio": "Automation Engineer",
+                "image": "Automation Engineer",
+                "following": false
+            }
+        },
+        {
+            "slug": "fg-52914",
+            "title": "fg",
+            "description": "f",
+            "body": "f",
+            "tagList": [],
+            "createdAt": "2022-06-06T09:55:37.754Z",
+            "updatedAt": "2022-06-06T12:05:16.634Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "qa-automation",
+                "bio": "Automation Engineer",
+                "image": "Automation Engineer",
+                "following": false
+            }
+        },
+        {
+            "slug": "qwe-52914",
+            "title": " qwe",
+            "description": "qqq",
+            "body": "qq",
+            "tagList": [],
+            "createdAt": "2022-06-06T07:40:29.810Z",
+            "updatedAt": "2022-06-06T07:40:29.810Z",
+            "favorited": false,
+            "favoritesCount": 0,
+            "author": {
+                "username": "qa-automation",
+                "bio": "Automation Engineer",
+                "image": "Automation Engineer",
+                "following": false
+            }
+        }
+    ],
+    "articlesCount": 5
+}
